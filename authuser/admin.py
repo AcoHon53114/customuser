@@ -10,28 +10,32 @@ class UserResource(resources.ModelResource):
         model = User
 
 class UserAdmin(BaseUserAdmin, ImportExportModelAdmin):
-    list_display = ('id', 'username', 'email', 'name')  # 使用 User 模型中实际存在的字段
-    list_display_links = ('id', 'username', 'email', 'name')  # 使用 User 模型中实际存在的字段
-    list_filter = ('username', 'email', 'name')  # 使用 User 模型中实际存在的字段
-    search_fields = ('username', 'email', 'name')  # 使用 User 模型中实际存在的字段
-    list_per_page = 25
-    resource_classes = [UserResource]
-
+    list_display = ('id', 'username', 'email', 'name', 'resident_id', 'resident_name', 'resident_description',
+                    'resident_contact_person', 'resident_contact_phone', 'resident_contact_email', 'resident_contact_relation')
+    list_display_links = ('id', 'username', 'email', 'name', 'resident_id', 'resident_name', 'resident_description',
+                          'resident_contact_person', 'resident_contact_phone', 'resident_contact_email', 'resident_contact_relation')
+    list_filter = ('username', 'email', 'name')
+    search_fields = ('username', 'email', 'name', 'resident_id', 'resident_name', 'resident_description',
+                     'resident_contact_person', 'resident_contact_phone', 'resident_contact_email', 'resident_contact_relation')
+    
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
-        ('Personal info', {'fields': ('email', 'name')}),
+        ('Personal info', {'fields': ('email', 'name', 'resident_id', 'resident_name', 'resident_description',
+                                      'resident_contact_person', 'resident_contact_phone', 'resident_contact_email',
+                                      'resident_contact_relation')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
+    
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username', 'email', 'password1', 'password2'),
+            'fields': ('username', 'email', 'password1', 'password2', 'resident_id', 'resident_name', 'resident_description',
+                       'resident_contact_person', 'resident_contact_phone', 'resident_contact_email', 'resident_contact_relation'),
         }),
     )
 
     def save_model(self, request, obj, form, change):
-        # 确保密码被正确哈希处理
         if obj.pk:
             orig_obj = User.objects.get(pk=obj.pk)
             if obj.password != orig_obj.password:
@@ -41,3 +45,4 @@ class UserAdmin(BaseUserAdmin, ImportExportModelAdmin):
         super().save_model(request, obj, form, change)
 
 admin.site.register(User, UserAdmin)  # 确保注册 UserAdmin
+    

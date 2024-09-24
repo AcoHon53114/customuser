@@ -45,6 +45,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(default=timezone.now)
     last_login = models.DateTimeField(blank=True, null=True)
     
+        # 新增的字段
+    resident_id = models.CharField(max_length=50, blank=True)
+    resident_name = models.CharField(max_length=50, blank=True)
+    resident_description = models.CharField(max_length=200, blank=True)
+    resident_contact_person = models.CharField(max_length=80, blank=True)
+    resident_contact_phone = models.CharField(max_length=100, blank=True)
+    resident_contact_email = models.CharField(max_length=100, blank=True)
+    resident_contact_relation = models.CharField(max_length=100, blank=True)
+    
     objects = CustomUserManager()
     
     USERNAME_FIELD = 'username'
