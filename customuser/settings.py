@@ -129,6 +129,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # 使用默认的认证后端
+    'django.contrib.auth.backends.ModelBackend', # 使用默认的认证后端
 ]
 
+#import/export function in admin site
+# settings.py
+from import_export.formats.base_formats import CSV, XLSX
+# multiple import options
+IMPORT_FORMATS = [CSV, XLSX]
+
+# single export options
+EXPORT_FORMATS = [XLSX]
