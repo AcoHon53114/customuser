@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-07 08:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: authuser/__pycache__/hashers.py:302 authuser/__pycache__/hashers.py:393
+#: authuser/__pycache__/hashers.py:482 authuser/__pycache__/hashers.py:573
+#: authuser/__pycache__/hashers.py:623 authuser/__pycache__/hashers.py:664
+#: authuser/__pycache__/hashers.py:712 authuser/__pycache__/hashers.py:757
+#: authuser/__pycache__/hashers.py:805
+msgid "algorithm"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:303
+msgid "iterations"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:304 authuser/__pycache__/hashers.py:399
+#: authuser/__pycache__/hashers.py:484 authuser/__pycache__/hashers.py:577
+#: authuser/__pycache__/hashers.py:624 authuser/__pycache__/hashers.py:665
+#: authuser/__pycache__/hashers.py:806
+msgid "salt"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:305 authuser/__pycache__/hashers.py:400
+#: authuser/__pycache__/hashers.py:578 authuser/__pycache__/hashers.py:625
+#: authuser/__pycache__/hashers.py:666 authuser/__pycache__/hashers.py:713
+#: authuser/__pycache__/hashers.py:758 authuser/__pycache__/hashers.py:807
+msgid "hash"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:394
+msgid "variety"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:395
+msgid "version"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:396
+msgid "memory cost"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:397
+msgid "time cost"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:398 authuser/__pycache__/hashers.py:576
+msgid "parallelism"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:483 authuser/__pycache__/hashers.py:574
+msgid "work factor"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:485
+msgid "checksum"
+msgstr ""
+
+#: authuser/__pycache__/hashers.py:575
+msgid "block size"
+msgstr ""
+
+#: authuser/validators.py:7
+msgid "Your password must contain at least 4 characters."
+msgstr ""
